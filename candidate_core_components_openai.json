@@ -1,0 +1,9 @@
+{
+    "classes": [
+        "Dishwasher",
+        "Tank",
+        "Heater",
+        "Jet",
+        "AbstractFactory"
+    ]
+}

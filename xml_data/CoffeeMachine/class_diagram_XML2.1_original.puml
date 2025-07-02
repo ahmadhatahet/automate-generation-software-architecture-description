@@ -1,0 +1,678 @@
+@startuml
+
+class Display_rotatingMessage {
+concept
+Display_rotatingMessage()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+CoffeeMachine_state_6 -- CoffeeMachine
+class Boiler {
+boilWater
+concept
+itsCoffeeMachine
+keepTemperature
+MAX_TEMP
+MIN_TEMP
+off
+on
+on_timeout
+power
+rootState_timeout
+sendaction_4
+sendaction_5
+waterTemp
+__setItsCoffeeMachine()
+_clearItsCoffeeMachine()
+_setItsCoffeeMachine()
+Boiler()
+initializer()
+~Boiler()
+boilWaterEnter()
+boilWaterExit()
+boilWaterTakeNull()
+boilWaterTakeTimeout()
+cancelTimeout()
+cancelTimeouts()
+cleanUpRelations()
+cleanUpStatechart()
+getItsCoffeeMachine()
+getMAX_TEMP()
+getMIN_TEMP()
+getPower()
+getWaterTemp()
+initStatechart()
+keepTemperatureEnter()
+keepTemperatureExit()
+keepTemperatureTakeNull()
+keepTemperatureTakeTimeout()
+offEnter()
+offExit()
+offTakeNull()
+offTakeTimeout()
+onEntDef()
+onTakeevOff()
+rootStateEntDef()
+sendaction_4Enter()
+sendaction_4TakeNull()
+sendaction_5Enter()
+sendaction_5TakeNull()
+setItsCoffeeMachine()
+setPower()
+setWaterTemp()
+startBehavior()
+}
+class CoffeeMachine_on {
+concept
+CoffeeMachine_on()
+initializer()
+entDef()
+exitState()
+handleEvent()
+}
+class Activitydiagram_0OfMachineTester {
+mContext
+Activitydiagram_0OfMachineTester()
+initializer()
+}
+Boiler_off -- Boiler
+class CoffeeMachine_sendaction_9 {
+concept
+CoffeeMachine_sendaction_9()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+class ActionInsertCoinInActivityActivitydiagram_0OfMachineTester {
+mContext
+ActionInsertCoinInActivityActivitydiagram_0OfMachineTester()
+initializer()
+filterPassableFlows()
+sendEvent()
+}
+ActionTakeCupInActivityActivitydiagram_0OfMachineTester -- MachineTester
+Display_rotatingMessage -- Display
+ActionSetPowerOnInActivityActivitydiagram_0OfMachineTester -- MachineTester
+CoffeeMachine_sendaction_18 -- CoffeeMachine
+class CoffeeMachine_off {
+concept
+CoffeeMachine_off()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+CoffeeMachine_idle -- CoffeeMachine
+ActionInitial_waitInActivityActivitydiagram_0OfMachineTester -- MachineTester
+class ActionAccepteventaction_17InActivityActivitydiagram_0OfMachineTester {
+mContext
+acceptEventData()
+ActionAccepteventaction_17InActivityActivitydiagram_0OfMachineTester()
+initializer()
+filterPassableFlows()
+}
+class evOff {
+
+evOff()
+isTypeOf()
+}
+class ActionTakeCupInActivityActivitydiagram_0OfMachineTester {
+mContext
+ActionTakeCupInActivityActivitydiagram_0OfMachineTester()
+initializer()
+filterPassableFlows()
+sendEvent()
+}
+class Boiler_keepTemperature {
+concept
+Boiler_keepTemperature()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+ActionAccepteventaction_17InActivityActivitydiagram_0OfMachineTester -- MachineTester
+ActionInsertCoinInActivityActivitydiagram_0OfMachineTester -- MachineTester
+CoffeeMachine_on -- CoffeeMachine
+CoffeeMachine_pressurize -- CoffeeMachine
+class Display_permanentMessage {
+concept
+Display_permanentMessage()
+initializer()
+handleEvent()
+}
+CoffeeMachine -- Display
+Boiler_ROOT -- Boiler
+class CoffeeMachine_cupReady {
+concept
+CoffeeMachine_cupReady()
+initializer()
+enterState()
+handleEvent()
+}
+class CoffeeMachine_fillWater {
+concept
+CoffeeMachine_fillWater()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+class CoffeeMachine_idle {
+concept
+CoffeeMachine_idle()
+initializer()
+entDef()
+enterState()
+}
+CoffeeMachine_fillCup -- CoffeeMachine
+Display_off -- Display
+class CoffeeMachine_pressurize {
+concept
+CoffeeMachine_pressurize()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+class evTakeCup {
+
+evTakeCup()
+isTypeOf()
+}
+class CoffeeMachine_fillCup {
+concept
+CoffeeMachine_fillCup()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+ActionAccepttimeevent_14InActivityActivitydiagram_0OfMachineTester -- MachineTester
+class CoffeeMachine_working {
+concept
+CoffeeMachine_working()
+initializer()
+entDef()
+}
+class CoffeeMachine_sendaction_18 {
+concept
+CoffeeMachine_sendaction_18()
+initializer()
+enterState()
+}
+CoffeeMachine_fillMilk -- CoffeeMachine
+MachineTester -- CoffeeMachine
+class CoffeeMachine {
+coffeeContainer
+concept
+cup
+cupContainer
+cupCounter
+cupReady
+fillCoffee
+fillCup
+fillMilk
+fillWater
+idle
+itsBoiler
+itsDisplay
+milkContainer
+off
+on
+power
+powerControl
+pressurize
+readyForCoin
+rootState_timeout
+sendaction_17
+sendaction_18
+sendaction_9
+state_6
+state_7
+state_7_timeout
+waitMaintenance
+waterPressure
+working
+working_timeout
+cancelTimeout()
+cancelTimeouts()
+cleanUpStatechart()
+CoffeeMachine()
+initializer()
+~CoffeeMachine()
+cupReadyEnter()
+cupReadyTakeevTakeCup()
+destroy()
+fillCoffeeEnter()
+fillCoffeeExit()
+fillCoffeeTakeNull()
+fillCoffeeTakeTimeout()
+fillCupEnter()
+fillCupExit()
+fillCupTakeNull()
+fillCupTakeTimeout()
+fillMilkEnter()
+fillMilkExit()
+fillMilkTakeNull()
+fillMilkTakeTimeout()
+fillWaterEnter()
+fillWaterExit()
+fillWaterTakeNull()
+fillWaterTakeTimeout()
+getCoffeeContainer()
+getCup()
+getCupContainer()
+getCupCounter()
+getItsBoiler()
+getItsDisplay()
+getMilkContainer()
+getPower()
+getWaterPressure()
+idleEntDef()
+idleEnter()
+initRelations()
+initStatechart()
+offEnter()
+offExit()
+offTakeNull()
+offTakeTimeout()
+onTakeevOff()
+powerControlEnter()
+powerControlExit()
+powerControlTakeNull()
+powerControlTakeTimeout()
+pressurizeEnter()
+pressurizeExit()
+pressurizeTakeNull()
+pressurizeTakeTimeout()
+readyForCoinEnter()
+readyForCoinExit()
+readyForCoinTakeevCoin()
+readyForCoinTakeevNeedBoiling()
+rootStateEntDef()
+sendaction_17Enter()
+sendaction_17TakeNull()
+sendaction_18Enter()
+sendaction_9Enter()
+sendaction_9TakeNull()
+setActiveContext()
+setCoffeeContainer()
+setCup()
+setCupContainer()
+setCupCounter()
+setMilkContainer()
+setPower()
+setWaterPressure()
+startBehavior()
+state_6EntDef()
+state_6Enter()
+state_7EntDef()
+waitMaintenanceEnter()
+waitMaintenanceTakeevWaterReady()
+workingEntDef()
+}
+class Display_off {
+concept
+Display_off()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+class CoffeeMachine_waitMaintenance {
+concept
+CoffeeMachine_waitMaintenance()
+initializer()
+enterState()
+handleEvent()
+}
+class Display_ROOT {
+concept
+Display_ROOT()
+initializer()
+entDef()
+}
+class evWaterReady {
+
+evWaterReady()
+isTypeOf()
+}
+Boiler_on -- Boiler
+ActionWait_for_machine_readyInActivityActivitydiagram_0OfMachineTester -- MachineTester
+ActionAccepttimeevent_19InActivityActivitydiagram_0OfMachineTester -- MachineTester
+class Boiler_sendaction_4 {
+concept
+Boiler_sendaction_4()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+class CoffeeMachine_readyForCoin {
+concept
+CoffeeMachine_readyForCoin()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+class Controller {
+rootState_active
+rootState_subState
+state_1_active
+state_1_subState
+state_2_active
+state_2_subState
+Controller()
+~Controller()
+initStatechart()
+Parallel_entDef()
+Parallel_exit()
+Parallel_IN()
+inline()
+Parallel_processEvent()
+rootState_entDef()
+rootState_IN()
+inline()
+rootState_processEvent()
+startBehavior()
+state_1_entDef()
+state_1_IN()
+inline()
+state_1_processEvent()
+state_2_entDef()
+state_2_IN()
+inline()
+state_2_processEvent()
+state_3_IN()
+inline()
+state_4_IN()
+inline()
+state_5_IN()
+inline()
+state_6_IN()
+inline()
+state_7_IN()
+inline()
+}
+Display_on -- Display
+class Boiler_ROOT {
+concept
+Boiler_ROOT()
+initializer()
+entDef()
+}
+class Display_on {
+concept
+Display_on()
+initializer()
+entDef()
+handleEvent()
+}
+CoffeeMachine -- Boiler
+class CoffeeMachine_ROOT {
+concept
+CoffeeMachine_ROOT()
+initializer()
+entDef()
+}
+CoffeeMachine_waitMaintenance -- CoffeeMachine
+class ActionAction_18InActivityActivitydiagram_0OfMachineTester {
+mContext
+ActionAction_18InActivityActivitydiagram_0OfMachineTester()
+initializer()
+filterPassableFlows()
+invokeContextMethod()
+}
+ActionAction_18InActivityActivitydiagram_0OfMachineTester -- MachineTester
+CoffeeMachine_cupReady -- CoffeeMachine
+CoffeeMachine_working -- CoffeeMachine
+Display_ROOT -- Display
+Boiler_sendaction_5 -- Boiler
+Boiler -- CoffeeMachine
+class evNeedBoiling {
+
+evNeedBoiling()
+isTypeOf()
+}
+Boiler_keepTemperature -- Boiler
+class ActionInitial_waitInActivityActivitydiagram_0OfMachineTester {
+mContext
+ActionInitial_waitInActivityActivitydiagram_0OfMachineTester()
+initializer()
+filterPassableFlows()
+invokeContextMethod()
+}
+class CoffeeMachine_fillMilk {
+concept
+CoffeeMachine_fillMilk()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+class CoffeeMachine_state_7 {
+concept
+CoffeeMachine_state_7()
+initializer()
+entDef()
+}
+class MachineTester {
+concept
+itsCoffeeMachine
+cleanUpRelations()
+createMainActivity()
+delegatedAcceptEventDataFromActionAccepteventaction_17InActivityActivitydiagram_0OfMachineTester()
+delegatedFilterPassableFlowsFromActionAccepteventaction_17InActivityActivitydiagram_0OfMachineTester()
+delegatedFilterPassableFlowsFromActionAccepttimeevent_13InActivityActivitydiagram_0OfMachineTester()
+delegatedFilterPassableFlowsFromActionAccepttimeevent_14InActivityActivitydiagram_0OfMachineTester()
+delegatedFilterPassableFlowsFromActionAccepttimeevent_19InActivityActivitydiagram_0OfMachineTester()
+delegatedFilterPassableFlowsFromActionAction_18InActivityActivitydiagram_0OfMachineTester()
+delegatedFilterPassableFlowsFromActionInitial_waitInActivityActivitydiagram_0OfMachineTester()
+delegatedFilterPassableFlowsFromActionInsertCoinInActivityActivitydiagram_0OfMachineTester()
+delegatedFilterPassableFlowsFromActionSetPowerOnInActivityActivitydiagram_0OfMachineTester()
+delegatedFilterPassableFlowsFromActionTakeCupInActivityActivitydiagram_0OfMachineTester()
+delegatedFilterPassableFlowsFromActionWait_for_machine_readyInActivityActivitydiagram_0OfMachineTester()
+delegatedInvokeContextMethodFromActionAction_18InActivityActivitydiagram_0OfMachineTester()
+delegatedInvokeContextMethodFromActionInitial_waitInActivityActivitydiagram_0OfMachineTester()
+delegatedInvokeContextMethodFromActionSetPowerOnInActivityActivitydiagram_0OfMachineTester()
+delegatedInvokeContextMethodFromActionWait_for_machine_readyInActivityActivitydiagram_0OfMachineTester()
+delegatedSendEventFromActionInsertCoinInActivityActivitydiagram_0OfMachineTester()
+delegatedSendEventFromActionTakeCupInActivityActivitydiagram_0OfMachineTester()
+getItsCoffeeMachine()
+MachineTester()
+~MachineTester()
+setItsCoffeeMachine()
+startBehavior()
+}
+class ActionAccepttimeevent_13InActivityActivitydiagram_0OfMachineTester {
+mContext
+ActionAccepttimeevent_13InActivityActivitydiagram_0OfMachineTester()
+initializer()
+filterPassableFlows()
+}
+CoffeeMachine_sendaction_9 -- CoffeeMachine
+class Boiler_on {
+concept
+Boiler_on()
+initializer()
+entDef()
+handleEvent()
+}
+CoffeeMachine_off -- CoffeeMachine
+class Boiler_boilWater {
+concept
+Boiler_boilWater()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+class Boiler_off {
+concept
+Boiler_off()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+ActionAccepttimeevent_13InActivityActivitydiagram_0OfMachineTester -- MachineTester
+class evStart {
+
+evStart()
+isTypeOf()
+}
+class evStopRotate {
+
+evStopRotate()
+isTypeOf()
+}
+class evStartRotate {
+
+evStartRotate()
+isTypeOf()
+}
+CoffeeMachine_powerControl -- CoffeeMachine
+class Display {
+concept
+itsCoffeeMachine
+off
+on
+on_timeout
+permanentMessage
+power
+rootState_timeout
+rotatingMessage
+rotationTime
+stateMessage
+__setItsCoffeeMachine()
+_clearItsCoffeeMachine()
+_setItsCoffeeMachine()
+cancelTimeout()
+cancelTimeouts()
+cleanUpRelations()
+cleanUpStatechart()
+Display()
+initializer()
+~Display()
+getItsCoffeeMachine()
+getNextMessageRotator()
+getPower()
+getRotationTime()
+getStateMessage()
+initStatechart()
+offEnter()
+offExit()
+offTakeNull()
+offTakeTimeout()
+onEntDef()
+onTakeevOff()
+permanentMessageTakeevStartRotate()
+rootStateEntDef()
+rotatingMessageEnter()
+rotatingMessageExit()
+rotatingMessageTakeevStopRotate()
+rotatingMessageTakeTimeout()
+setItsCoffeeMachine()
+setMessage()
+setPower()
+setRotationTime()
+setStateMessage()
+startBehavior()
+}
+CoffeeMachine_readyForCoin -- CoffeeMachine
+class ActionSetPowerOnInActivityActivitydiagram_0OfMachineTester {
+mContext
+ActionSetPowerOnInActivityActivitydiagram_0OfMachineTester()
+initializer()
+filterPassableFlows()
+invokeContextMethod()
+}
+Activitydiagram_0OfMachineTester -- MachineTester
+Boiler_sendaction_4 -- Boiler
+CoffeeMachine_ROOT -- CoffeeMachine
+CoffeeMachine_fillWater -- CoffeeMachine
+class CoffeMachineComponent {
+
+CoffeMachineComponent()
+}
+class evCoin {
+
+evCoin()
+isTypeOf()
+}
+class CoffeeMachine_powerControl {
+concept
+CoffeeMachine_powerControl()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+Display -- CoffeeMachine
+class ActionAccepttimeevent_19InActivityActivitydiagram_0OfMachineTester {
+mContext
+ActionAccepttimeevent_19InActivityActivitydiagram_0OfMachineTester()
+initializer()
+filterPassableFlows()
+}
+class CoffeeMachine_state_6 {
+concept
+CoffeeMachine_state_6()
+initializer()
+entDef()
+enterState()
+}
+Display_permanentMessage -- Display
+Boiler_boilWater -- Boiler
+class CoffeePackage_OMInitializer {
+
+CoffeePackage_OMInitializer()
+~CoffeePackage_OMInitializer()
+}
+CoffeeMachine_state_7 -- CoffeeMachine
+CoffeeMachine_sendaction_17 -- CoffeeMachine
+class CoffeeMachine_fillCoffee {
+concept
+CoffeeMachine_fillCoffee()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+class CoffeeMachine_sendaction_17 {
+concept
+CoffeeMachine_sendaction_17()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+class ActionAccepttimeevent_14InActivityActivitydiagram_0OfMachineTester {
+mContext
+ActionAccepttimeevent_14InActivityActivitydiagram_0OfMachineTester()
+initializer()
+filterPassableFlows()
+}
+class ActionWait_for_machine_readyInActivityActivitydiagram_0OfMachineTester {
+mContext
+ActionWait_for_machine_readyInActivityActivitydiagram_0OfMachineTester()
+initializer()
+filterPassableFlows()
+invokeContextMethod()
+}
+CoffeeMachine_fillCoffee -- CoffeeMachine
+class Boiler_sendaction_5 {
+concept
+Boiler_sendaction_5()
+initializer()
+enterState()
+exitState()
+handleEvent()
+}
+
+@enduml

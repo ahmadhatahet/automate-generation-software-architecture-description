@@ -1,0 +1,17 @@
+{
+    "AbstractFactory": [
+        "dishwasher_cpp\\host\\AbstractFactory.h"
+    ],
+    "Dishwasher": [
+        "dishwasher_cpp\\host\\Dishwasher.h"
+    ],
+    "Heater": [
+        "dishwasher_cpp\\host\\Heater.h"
+    ],
+    "Jet": [
+        "dishwasher_cpp\\host\\Jet.h"
+    ],
+    "Tank": [
+        "dishwasher_cpp\\host\\Tank.h"
+    ]
+}
